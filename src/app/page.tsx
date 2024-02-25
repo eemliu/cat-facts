@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './styles.module.scss'
 import { FaRegHeart, FaHeart, FaCat } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
+import Marquee from 'react-fast-marquee';
 
 type CatFact = {
   fact: string, 
@@ -87,7 +88,11 @@ const CatFactsPage: React.FC<any> = (props) => {
 
   return (
     <div className={styles.main}>
-      <h1 className={styles.title}>Some cool cat facts:</h1>
+      <Marquee autoFill speed={150} className={styles.marqueeWrapper} >
+        <span className={styles.marqueeTitle}>Some cool cat facts
+          <span style={{ marginLeft: '40px' }}>&#183;</span>
+        </span>
+      </Marquee>
       <div className={styles.factsContainer}>
         {catFacts.map((catFact: CatFact, idx: number) => {
           return (
@@ -119,18 +124,18 @@ const CatFacts = (props: CatFactsInfo) => {
   return (
     <div className={styles.factCard}>
     <div className={styles.factContent}>
-      <FaCat className={styles.catIcon} size={100} />
+      <FaCat className={styles.catIcon} size={150} />
       <div className={styles.factText}>
         <h1 className={styles.factNumber}>{`Fact #${number + 1}`}</h1>
         <h1>{fact}</h1>
         <div className={styles.factButtonContainer}>
           <button onClick={onRemove}>
-            <MdDeleteOutline size={30} />
+            <MdDeleteOutline size={40} />
           </button>
           <button
             className={isFav ? styles.fav : styles.unfav}
             onClick={onFav}>
-            {isFav ? (<FaHeart size={25} className={styles.fav} />) : (<FaRegHeart size={25} />)}
+            {isFav ? (<FaHeart size={32} className={styles.fav} />) : (<FaRegHeart size={32} />)}
           </button>
         </div>
       </div>
