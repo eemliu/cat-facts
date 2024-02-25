@@ -1,2 +1,2 @@
 Fun web application to display and choose your favourite cat facts!
-![Uploading Screenshot 2024-02-25 at 10.59.26 pm.png…]()
+![Cat: Screenshot_2024-02-25_at_10.59.26_pm.png](assets/pic.png)
