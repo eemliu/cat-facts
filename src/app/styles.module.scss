@@ -1,0 +1,153 @@
+.main { 
+  --main-background-rgb: 11, 38, 32;
+  --primary-rgb:  23, 54, 56;
+  --secondary-rgb: 216, 255, 133;
+  --primary-text-colour: 224, 227, 203;
+  --secondary-text-colour: 255, 255, 255;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 32px;
+}
+
+.main { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(var(--main-background-rgb));
+}
+
+.title { 
+  font-size: 50px;
+  color: rgb(var(--primary-text-colour));
+}
+
+.factsContainer { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 48px;
+}
+
+.factCard {
+  width: 400px;
+  height: 450px;
+  padding: 48px;
+  background-color: rgba(23, 54, 56, 0.7);
+  border-radius: 16px;
+}
+
+.factCard:hover { 
+  background: linear-gradient(
+    45deg,
+    rgb(var(--primary-rgb)), 
+    rgb(var(--secondary-rgb))
+  );
+  transform: scale(1.05);
+  transition-duration: 90ms;
+}
+
+.factContent { 
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.factText {
+  font-weight: lighter;
+  font-size: small;
+  color: rgb(var(--primary-text-colour));
+}
+
+.factNumber { 
+  font-size: large;
+  color: rgb(var(--secondary-text-colour));
+}
+
+.catIcon { 
+  color: rgb(var(--secondary-rgb));
+}
+
+.addButtonContainer {
+  display: flex;
+  position: relative;
+}
+
+.fab { 
+  position: fixed;
+  bottom: 50px;
+  right: 70px;
+  overflow-y: scroll;
+  z-index: 10;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.modal { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  overflow-y: scroll;
+  top: 200px;
+  width: 500px;
+  height: 150px;
+  background-color: rgba(var(--primary-text-colour), 1);
+  border: none;
+  border-radius: 5px;
+}
+
+.modalHeader {
+  color: rgb(var(--primary-rgb));
+}
+
+.form { 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.modalButtonsContainer button {
+  cursor: pointer;
+}
+
+.factButtonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.factButtonContainer button { 
+  /* padding: 10px; */
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: rgb(var(--primary-text-colour));
+}
+
+.factButtonContainer button:hover { 
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255, 0.4)
+}
+
+.fav { 
+  color: #cc3333;
+}
+
+.fav:hover { 
+  color: rgb(204, 51, 51, 0.8);
+}
