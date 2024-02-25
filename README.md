@@ -1,1 +1,1 @@
-# cat-facts
+Fun web application to display and choose your favourite cat facts!
